@@ -1,13 +1,15 @@
 {
   "download": {
     "type": "single",
-    "sources": ["PartyUtils.rb"],
+    "sources": [
+      "PartyOptions.rb"
+    ],
     "outputName": "PartyUtils"
   },
   "codeSamples": [
     {
-      "path": "PartyUtils.rb",
-      "label": "PartyUtils.rb",
+      "path": "PartyOptions.rb",
+      "label": "PartyOptions.rb",
       "language": "ruby"
     }
   ],
