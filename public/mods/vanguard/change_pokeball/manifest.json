@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "ChangePokeball.rb"
+    ],
+    "outputName": "ChangePokeball"
+  },
+  "codeSamples": [
+    {
+      "path": "ChangePokeball.rb",
+      "label": "ChangePokeball.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}
