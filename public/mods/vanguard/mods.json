@@ -1,0 +1,51 @@
+[
+  {
+    "id": "mods_mod",
+    "name": "Mods Mod",
+    "short-desc": "Allows compatibility between different Mods.",
+    "desc": "This mod allows compatibility between different mods that override PBS files. These mods should be defined as subfolders of the `Mods` folder in the main game folder and each mod should define their own PBS files with similar naming conventions (e.g. `pokemon.txt`, `moves.txt`, etc.)",
+    "requires": [],
+    "authors": ["gotheru"],
+    "tags": ["core"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "chansey",
+    "name": "Call Chansey Mod",
+    "short-desc": "Adds an option to heal from the menu.",
+    "desc": "Adds an option to call Chansey from the main game menu. When pressed, Chansey will magically heal your team from anywhere.",
+    "requires": [],
+    "authors": ["gotheru"],
+    "tags": ["qol", "menu-options"],
+    "version": "1.1.0"
+  },
+  {
+    "id": "xatu",
+    "name": "Call Xatu Mod",
+    "short-desc": "Adds an option to teleport from the menu.",
+    "desc": "Adds an option to call Xatu from the main game menu. When pressed, Xatu will show you the current map and you can teleport to any place where you have talked to their Church of Isaiah member.",
+    "requires": [],
+    "authors": ["gotheru"],
+    "tags": ["qol", "menu-options"],
+    "version": "1.1.0"
+  },
+  {
+    "id": "remote_pc",
+    "name": "Remote PC Mod",
+    "short-desc": "Adds an option to open the PC from the menu.",
+    "desc": "Adds an option to open the PC remotely from the menu regardless of where you are in the map.",
+    "requires": [],
+    "authors": ["gotheru"],
+    "tags": ["qol", "menu-options"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "pc_utils",
+    "name": "PC Utils",
+    "short-desc": "Compatibility between PC add-ons.",
+    "desc": "Core mod for mods that want to add extra functionalities to the PC Storage System.",
+    "authors": ["gotheru"],
+    "tags": ["core"],
+    "version": "1.1.0"
+  }
+]

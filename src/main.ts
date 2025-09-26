@@ -1,15 +1,24 @@
+import 'highlight.js/styles/github-dark.css';
 import './style.css';
 
-const app = document.querySelector<HTMLDivElement>('#app');
+import { Router } from './router';
+import { showError } from './render';
+import { renderGame } from './views/game';
+import { renderHome } from './views/home';
+import { renderInstall } from './views/install';
+import { renderMod } from './views/mod';
 
-if (!app) {
-  throw new Error('Root app container not found');
-}
+const basePath = import.meta.env.BASE_URL;
 
-app.innerHTML = `
-  <main class="hero">
-    <h1>Pokemon Mods Hub</h1>
-    <p class="lead">Welcome! This will soon be the home for docs, tools, and community-made enhancements for the Pokemon Essentials modding scene.</p>
-    <p>We are just getting started?stay tuned as we add guides, download links, and project showcases.</p>
-  </main>
-`;
+const router = new Router(
+  [
+    { pattern: /^\/$/, handler: () => renderHome() },
+    { pattern: /^\/game\/([^/]+)\/?$/, handler: ([gameId]) => renderGame(gameId) },
+    { pattern: /^\/game\/([^/]+)\/install\/?$/, handler: ([gameId]) => renderInstall(gameId) },
+    { pattern: /^\/game\/([^/]+)\/mod\/([^/]+)\/?$/, handler: ([gameId, modId]) => renderMod(gameId, modId) },
+  ],
+  () => showError('Page not found'),
+  basePath,
+);
+
+router.start();

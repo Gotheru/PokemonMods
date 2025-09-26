@@ -1,0 +1,15 @@
+{
+  "download": {
+    "type": "single",
+    "sources": ["ModsMod.rb"],
+    "outputName": "ModsMod"
+  },
+  "codeSamples": [
+    {
+      "path": "ModsMod.rb",
+      "label": "ModsMod.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

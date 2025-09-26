@@ -1,0 +1,15 @@
+{
+  "download": {
+    "type": "single",
+    "sources": ["PartyUtils.rb"],
+    "outputName": "PartyUtils"
+  },
+  "codeSamples": [
+    {
+      "path": "PartyUtils.rb",
+      "label": "PartyUtils.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

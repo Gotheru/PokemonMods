@@ -1,0 +1,15 @@
+{
+  "download": {
+    "type": "single",
+    "sources": ["PCUtils.rb"],
+    "outputName": "PCUtils"
+  },
+  "codeSamples": [
+    {
+      "path": "PCUtils.rb",
+      "label": "PCUtils.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

@@ -3,3 +3,5 @@ node_modules
 dist
 .vscode
 .idea
+public/mods/**/downloads/
+public/mods/**/manifest.generated.json

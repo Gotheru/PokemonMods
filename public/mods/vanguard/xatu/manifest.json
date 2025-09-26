@@ -1,0 +1,18 @@
+{
+  "download": {
+    "type": "archive",
+    "sources": [
+      "Graphics",
+      "Mods"
+    ],
+    "outputName": "CallXatu"
+  },
+  "codeSamples": [
+    {
+      "path": "Mods/CallXatu.rb",
+      "label": "Mods/CallXatu.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

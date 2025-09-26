@@ -1,0 +1,18 @@
+{
+  "download": {
+    "type": "archive",
+    "sources": [
+      "Graphics",
+      "Mods"
+    ],
+    "outputName": "RemotePC"
+  },
+  "codeSamples": [
+    {
+      "path": "Mods/RemotePC.rb",
+      "label": "Mods/RemotePC.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

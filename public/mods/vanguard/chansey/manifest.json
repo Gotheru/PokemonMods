@@ -1,0 +1,23 @@
+{
+  "download": {
+    "type": "archive",
+    "sources": [
+      "Graphics",
+      "Mods"
+    ],
+    "outputName": "CallChansey"
+  },
+  "codeSamples": [
+    {
+      "path": "Mods/CallChansey.rb",
+      "label": "Mods/CallChansey.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": [
+    {
+      "path": "Graphics/Pictures/Voltseon's Pause Menu/menuHealParty.png",
+      "alt": "Chansey mod pause menu screenshot"
+    }
+  ]
+}
