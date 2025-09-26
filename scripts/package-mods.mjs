@@ -10,6 +10,12 @@ const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, '..');
 const modsRoot = path.join(repoRoot, 'public', 'mods');
 
+const args = new Set(process.argv.slice(2));
+const isCI = process.env.GITHUB_ACTIONS === 'true';
+const generateMissingManifests =
+  !args.has('--no-generate-missing-manifests') &&
+  (args.has('--generate-missing-manifests') || isTruthy(process.env.GENERATE_MISSING_MANIFESTS) || isCI);
+
 async function pathExists(target) {
   try {
     await fs.access(target);
@@ -22,6 +28,77 @@ async function pathExists(target) {
 async function readJSON(file) {
   const content = await fs.readFile(file, 'utf-8');
   return JSON.parse(content);
+}
+
+function isTruthy(value) {
+  if (value === undefined || value === null) {
+    return false;
+  }
+  const normalized = String(value).trim().toLowerCase();
+  return ['1', 'true', 'yes', 'on'].includes(normalized);
+}
+
+function toCamelCase(value) {
+  const textValue = String(value);
+  const parts = textValue.split(/[^a-zA-Z0-9]+/).filter(Boolean);
+  if (!parts.length) {
+    if (!textValue.length) return textValue;
+    return textValue.charAt(0).toUpperCase() + textValue.slice(1);
+  }
+  return parts.map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join('');
+}
+
+const IGNORED_SOURCE_NAMES = new Set(['manifest.json', 'manifest.generated.json', 'downloads']);
+const IGNORED_FILE_NAMES = new Set(['.DS_Store', 'Thumbs.db']);
+
+async function collectModEntries(modDir) {
+  const entries = await fs.readdir(modDir, { withFileTypes: true });
+  const sources = [];
+  const files = [];
+  const directories = [];
+  for (const entry of entries) {
+    if (IGNORED_SOURCE_NAMES.has(entry.name)) continue;
+    if (IGNORED_FILE_NAMES.has(entry.name)) continue;
+    if (entry.isDirectory()) {
+      directories.push(entry.name);
+      sources.push(entry.name);
+      continue;
+    }
+    if (entry.isFile()) {
+      files.push(entry.name);
+      sources.push(entry.name);
+    }
+  }
+  return { sources, files, directories };
+}
+
+function normalizePathSegment(segment) {
+  return segment.replace(/\\/g, '/');
+}
+
+async function buildDefaultManifest(modDir) {
+  const { sources, files, directories } = await collectModEntries(modDir);
+  const singleFile = files.length === 1 && directories.length === 0;
+  const downloadSources = singleFile ? [files[0]] : sources;
+  const normalizedSources = downloadSources.map((source) => normalizePathSegment(source));
+  const manifest = {
+    download: {
+      type: singleFile ? 'single' : 'archive',
+      sources: normalizedSources,
+      outputName: toCamelCase(path.basename(modDir)),
+    },
+    codeSamples: [],
+    images: [],
+  };
+  if (singleFile) {
+    const samplePath = normalizedSources[0];
+    manifest.codeSamples.push({
+      path: samplePath,
+      label: samplePath,
+      language: 'ruby',
+    });
+  }
+  return manifest;
 }
 
 function normalizeExtension(ext) {
@@ -119,11 +196,18 @@ async function packageMods() {
       }
       const modDir = path.join(gameDir, modId);
       const manifestPath = path.join(modDir, 'manifest.json');
+      let manifest;
       if (!(await pathExists(manifestPath))) {
-        console.warn(`Skipping ${gameId}/${modId}: missing manifest.json`);
-        continue;
+        if (generateMissingManifests) {
+          manifest = await buildDefaultManifest(modDir);
+          await fs.writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, 'utf-8');
+          console.info(`Generated default manifest for ${gameId}/${modId}`);
+        } else {
+          console.warn(`Skipping ${gameId}/${modId}: missing manifest.json`);
+          continue;
+        }
       }
-      const manifest = await readJSON(manifestPath);
+      manifest ??= await readJSON(manifestPath);
       const download = manifest.download;
       if (!download) {
         console.warn(`Skipping ${gameId}/${modId}: manifest missing download section.`);

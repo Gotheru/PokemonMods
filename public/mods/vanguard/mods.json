@@ -45,7 +45,26 @@
     "short-desc": "Compatibility between PC add-ons.",
     "desc": "Core mod for mods that want to add extra functionalities to the PC Storage System.",
     "authors": ["gotheru"],
-    "tags": ["core"],
+    "tags": ["core", "pc-options"],
+    "version": "1.1.0"
+  },
+  {
+    "id": "party_utils",
+    "name": "Party Utils",
+    "short-desc": "Compatibility between Pokemon party add-ons.",
+    "desc": "Core mod for mods that want to add extra functionalities to the Pokemon party screen.",
+    "authors": ["gotheru"],
+    "tags": ["core", "party-options"],
+    "version": "1.1.0"
+  },
+  {
+    "id": "change_pokeball",
+    "name": "Change PokeBall",
+    "short-desc": "Change your Pokemon's PokeBall.",
+    "desc": "Adds an option in the party menu to change your Pokemon's PokeBall.",
+    "authors": ["gotheru"],
+    "requires": ["party_utils"],
+    "tags": ["core", "party-options"],
     "version": "1.1.0"
   }
 ]
