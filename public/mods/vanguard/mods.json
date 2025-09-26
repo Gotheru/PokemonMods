@@ -10,6 +10,16 @@
     "version": "1.0.0"
   },
   {
+    "id": "grass_lag",
+    "name": "Grass Lag Fix",
+    "short-desc": "Removes the lag caused by grass in the game.",
+    "desc": "The mod removes the grass rustle animation, which ultimately causes a lot of lag issues in the game.",
+    "requires": [],
+    "authors": ["gotheru"],
+    "tags": ["performance"],
+    "version": "1.0.0"
+  },
+  {
     "id": "chansey",
     "name": "Call Chansey Mod",
     "short-desc": "Adds an option to heal from the menu.",
@@ -55,7 +65,7 @@
     "desc": "Core mod for mods that want to add extra functionalities to the Pokemon party screen.",
     "authors": ["gotheru"],
     "tags": ["core", "party-options"],
-    "version": "1.1.0"
+    "version": "1.0.0"
   },
   {
     "id": "change_pokeball",
@@ -64,7 +74,84 @@
     "desc": "Adds an option in the party menu to change your Pokemon's PokeBall.",
     "authors": ["gotheru"],
     "requires": ["party_utils"],
-    "tags": ["core", "party-options"],
-    "version": "1.1.0"
+    "tags": ["party-options"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "hidden_power",
+    "name": "Change Hidden Power",
+    "short-desc": "Change your Pokemon's Hidden Power type.",
+    "desc": "Adds an option in the party menu to change your Pokemon's Hidden Power type.",
+    "authors": ["gotheru"],
+    "requires": ["party_utils"],
+    "tags": ["party-options"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "sort_pc",
+    "name": "Sort PC",
+    "short-desc": "Sort your PC boxes.",
+    "desc": "Adds the option to sort your boxes in the PC menu. The mod lets you sort by name, dex number, stats or base stats in descending order. The mod will sort the first 39 boxes in your PC (i.e. the last box will not be sorted).",
+    "authors": ["gotheru"],
+    "requires": ["pc_utils"],
+    "tags": ["pc-options", "qol"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "find_pc",
+    "name": "Find PC",
+    "short-desc": "Finds Pokemon or Items in your PC.",
+    "desc": "Adds the option to find Pokemon or Items in your PC. Pokemon can be searched by species name or by nickname, and it allows searching for eggs as well.",
+    "authors": ["gotheru"],
+    "requires": ["pc_utils"],
+    "tags": ["pc-options", "qol"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "release_box",
+    "name": "Release Box",
+    "short-desc": "Bulk releases an entire box in your PC.",
+    "desc": "Adds the option to bulk release all Pokemon in one of your boxes in your PC. The mod asks for confirmation in case you use it by mistake.",
+    "authors": ["gotheru"],
+    "requires": ["pc_utils"],
+    "tags": ["pc-options"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "swap_box",
+    "name": "Swap Boxes",
+    "short-desc": "Swaps two boxes in your PC.",
+    "desc": "Adds the option to swap two boxes in your PC. The background and box names are also swapped.",
+    "authors": ["gotheru"],
+    "requires": ["pc_utils"],
+    "tags": ["pc-options"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "photosensitivity",
+    "name": "Photosensitity Mod",
+    "short-desc": "Helps players that struggle with photosensitivity.",
+    "desc": "Currently, the mod only removes the two flashes that appear just right before every battle. Please contact gotheru on Discord if you have more suggestions for this mod.",
+    "authors": ["gotheru"],
+    "tags": ["accessibility"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "magnetic_lure",
+    "name": "Magnet(ic) Lure",
+    "short-desc": "Adds Rejuvenation's Magnetic Lure.",
+    "desc": "If the first Pokemon in your party holds a Magnet, the mod will filter out Pokemon species that you have already caught from wild random encounters. If you want this mod to be active at all times rather thank just when the first Pokemon holds a Magnet, remove the `pbShouldFilterKnownPkmnFromEncounter?` chunk and add `pbShouldFilterKnownPkmnFromEncounter?; true; end`",
+    "authors": ["gotheru"],
+    "tags": ["add-ons", "qol"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "shiny_gummies",
+    "name": "Shiny Gummies",
+    "short-desc": "Adds Shiny Gummies to the game.",
+    "desc": "If the first Pokemon in your party holds a one of the new IV gummies, then it will filter out Pokemon from a different species from wild random encounters. That way, you can battle the same Pokemon over and over for your shiny hunts!",
+    "authors": ["gotheru"],
+    "tags": ["add-ons", "qol"],
+    "version": "1.0.0"
   }
 ]
