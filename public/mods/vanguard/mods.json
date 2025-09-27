@@ -139,7 +139,7 @@
   },
   {
     "id": "photosensitivity",
-    "name": "Photosensitity Mod",
+    "name": "Photosensitivity Mod",
     "short-desc": "Helps players that struggle with photosensitivity.",
     "desc": "Currently, the mod only removes the two flashes that appear just right before every battle. Please contact gotheru on Discord if you have more suggestions for this mod.",
     "authors": ["gotheru"],
