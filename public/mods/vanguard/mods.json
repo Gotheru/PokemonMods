@@ -26,7 +26,7 @@
     "desc": "Adds an option to call Chansey from the main game menu. When pressed, Chansey will magically heal your team from anywhere.",
     "requires": [],
     "authors": ["gotheru"],
-    "tags": ["qol", "menu-options"],
+    "tags": ["qol", "menu-options", "cheats"],
     "version": "1.1.0"
   },
   {
@@ -84,7 +84,17 @@
     "desc": "Adds an option in the party menu to change your Pokemon's Hidden Power type.",
     "authors": ["gotheru"],
     "requires": ["party_utils"],
-    "tags": ["party-options"],
+    "tags": ["party-options", "cheats"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "frens",
+    "name": "frens",
+    "short-desc": "Change your Pokemon's Happiness.",
+    "desc": "Adds an option in the party menu to change your Pokemon's Happiness.",
+    "authors": ["gotheru"],
+    "requires": ["party_utils"],
+    "tags": ["party-options", "cheats"],
     "version": "1.0.0"
   },
   {
@@ -152,6 +162,60 @@
     "desc": "If the first Pokemon in your party holds a one of the new IV gummies, then it will filter out Pokemon from a different species from wild random encounters. That way, you can battle the same Pokemon over and over for your shiny hunts!",
     "authors": ["gotheru"],
     "tags": ["add-ons", "qol"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "exp_gains",
+    "name": "Exponential Exp. Gains",
+    "short-desc": "Battles give much more experience.",
+    "desc": "After defeating a Pokemon in a battle, your Pokemon will gain an extra amount of exp. points equivalent to 10% of the exp. points needed to reach the level cap.",
+    "authors": ["gotheru"],
+    "tags": ["qol", "cheats"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "guaranteed_catch",
+    "name": "Guaranteed Catch",
+    "short-desc": "All PokeBalls are MasterBalls.",
+    "desc": "The mod makes all PokeBalls have a guaranteed chance to catch the opposing Pokemon, no matter the foe's HP or status (just like a Master Ball!)",
+    "authors": ["gotheru"],
+    "tags": ["qol", "cheats"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "money_bags",
+    "name": "Money Bags",
+    "short-desc": "Multiplies money gained by 5.",
+    "desc": "This mod multiples the money gained in battles by 5.",
+    "authors": ["gotheru"],
+    "tags": ["qol", "cheats"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "auto_pickup",
+    "name": "Auto Pickup",
+    "short-desc": "Stores automatically items gained during a battle.",
+    "desc": "This mod stores automatically items gained during a battle (Avarice, Thief, etc.) or picked up by Pickup or Honey Gather after the battle.",
+    "authors": ["gotheru"],
+    "tags": ["qol"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "lowres_weather",
+    "name": "Low Resolution Weather",
+    "short-desc": "Disables Weather particles.",
+    "desc": "Disables the weather particles that cause lag in some systems.",
+    "authors": ["gotheru"],
+    "tags": ["performance"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "fast_eggs",
+    "name": "Fast Eggs",
+    "short-desc": "Makes breeding x4 faster.",
+    "desc": "Makes waiting for eggs in the Day Care four times faster.",
+    "authors": ["gotheru"],
+    "tags": ["add_ons", "qol", "cheats"],
     "version": "1.0.0"
   }
 ]
