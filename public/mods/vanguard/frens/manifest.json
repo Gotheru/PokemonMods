@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "frens.rb"
+    ],
+    "outputName": "Frens"
+  },
+  "codeSamples": [
+    {
+      "path": "frens.rb",
+      "label": "frens.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

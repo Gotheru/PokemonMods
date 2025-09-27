@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "ExponentialExpGains.rb"
+    ],
+    "outputName": "ExpGains"
+  },
+  "codeSamples": [
+    {
+      "path": "ExponentialExpGains.rb",
+      "label": "ExponentialExpGains.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

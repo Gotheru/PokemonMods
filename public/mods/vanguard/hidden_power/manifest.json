@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "ChangeHiddenPower.rb"
+    ],
+    "outputName": "HiddenPower"
+  },
+  "codeSamples": [
+    {
+      "path": "ChangeHiddenPower.rb",
+      "label": "ChangeHiddenPower.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

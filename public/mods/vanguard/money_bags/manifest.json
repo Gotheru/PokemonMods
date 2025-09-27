@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "MoneyBags.rb"
+    ],
+    "outputName": "MoneyBags"
+  },
+  "codeSamples": [
+    {
+      "path": "MoneyBags.rb",
+      "label": "MoneyBags.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

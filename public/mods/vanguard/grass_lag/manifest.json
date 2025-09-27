@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "FixGrassLag.rb"
+    ],
+    "outputName": "GrassLag"
+  },
+  "codeSamples": [
+    {
+      "path": "FixGrassLag.rb",
+      "label": "FixGrassLag.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

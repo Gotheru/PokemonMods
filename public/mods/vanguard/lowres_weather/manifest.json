@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "lowres_weather.rb"
+    ],
+    "outputName": "LowresWeather"
+  },
+  "codeSamples": [
+    {
+      "path": "lowres_weather.rb",
+      "label": "lowres_weather.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

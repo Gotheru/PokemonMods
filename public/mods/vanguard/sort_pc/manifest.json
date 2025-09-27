@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "SortPC.rb"
+    ],
+    "outputName": "SortPc"
+  },
+  "codeSamples": [
+    {
+      "path": "SortPC.rb",
+      "label": "SortPC.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

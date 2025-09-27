@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "AutoPickup.rb"
+    ],
+    "outputName": "AutoPickup"
+  },
+  "codeSamples": [
+    {
+      "path": "AutoPickup.rb",
+      "label": "AutoPickup.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

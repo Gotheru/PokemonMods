@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "ShinyGummies.rb"
+    ],
+    "outputName": "ShinyGummies"
+  },
+  "codeSamples": [
+    {
+      "path": "ShinyGummies.rb",
+      "label": "ShinyGummies.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

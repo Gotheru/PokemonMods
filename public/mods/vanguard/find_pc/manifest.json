@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "FindPC.rb"
+    ],
+    "outputName": "FindPc"
+  },
+  "codeSamples": [
+    {
+      "path": "FindPC.rb",
+      "label": "FindPC.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "SwapBoxes.rb"
+    ],
+    "outputName": "SwapBox"
+  },
+  "codeSamples": [
+    {
+      "path": "SwapBoxes.rb",
+      "label": "SwapBoxes.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

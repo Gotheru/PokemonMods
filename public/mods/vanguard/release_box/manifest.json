@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "ReleaseBox.rb"
+    ],
+    "outputName": "ReleaseBox"
+  },
+  "codeSamples": [
+    {
+      "path": "ReleaseBox.rb",
+      "label": "ReleaseBox.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

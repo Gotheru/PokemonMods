@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "MagneticLure.rb"
+    ],
+    "outputName": "MagneticLure"
+  },
+  "codeSamples": [
+    {
+      "path": "MagneticLure.rb",
+      "label": "MagneticLure.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

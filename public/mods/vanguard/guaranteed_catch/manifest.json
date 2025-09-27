@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "GuaranteedCatch.rb"
+    ],
+    "outputName": "GuaranteedCatch"
+  },
+  "codeSamples": [
+    {
+      "path": "GuaranteedCatch.rb",
+      "label": "GuaranteedCatch.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

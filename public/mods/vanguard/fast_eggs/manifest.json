@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "FastEggs.rb"
+    ],
+    "outputName": "FastEggs"
+  },
+  "codeSamples": [
+    {
+      "path": "FastEggs.rb",
+      "label": "FastEggs.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}

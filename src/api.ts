@@ -2,13 +2,23 @@ import type { GameSummary, ModSummary, GameData, ModManifest } from './types';
 
 const cache = new Map<string, Promise<unknown>>();
 const originBase = new URL(import.meta.env.BASE_URL, window.location.origin).toString();
+const assetVersion = typeof __ASSET_BUST__ === 'string' && __ASSET_BUST__.length ? __ASSET_BUST__ : '';
 
-function assetUrl(path: string): string {
-  return new URL(path.replace(/^\//, ''), originBase).toString();
+interface AssetUrlOptions {
+  cacheBust?: boolean;
+}
+
+function assetUrl(path: string, options: AssetUrlOptions = {}): string {
+  const normalized = path.replace(/^\//, '');
+  const url = new URL(normalized, originBase);
+  if (options.cacheBust && assetVersion) {
+    url.searchParams.set('v', assetVersion);
+  }
+  return url.toString();
 }
 
 async function fetchJSON<T>(path: string): Promise<T> {
-  const url = assetUrl(path);
+  const url = assetUrl(path, { cacheBust: true });
   if (!cache.has(url)) {
     cache.set(
       url,
@@ -25,7 +35,7 @@ async function fetchJSON<T>(path: string): Promise<T> {
 }
 
 async function fetchText(path: string): Promise<string> {
-  const url = assetUrl(path);
+  const url = assetUrl(path, { cacheBust: true });
   if (!cache.has(url)) {
     cache.set(
       url,

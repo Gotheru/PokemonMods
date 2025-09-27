@@ -1,0 +1,17 @@
+{
+  "download": {
+    "type": "single",
+    "sources": [
+      "Photosensitivity.rb"
+    ],
+    "outputName": "Photosensitivity"
+  },
+  "codeSamples": [
+    {
+      "path": "Photosensitivity.rb",
+      "label": "Photosensitivity.rb",
+      "language": "ruby"
+    }
+  ],
+  "images": []
+}
