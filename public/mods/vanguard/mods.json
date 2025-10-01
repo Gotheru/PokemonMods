@@ -215,7 +215,16 @@
     "short-desc": "Makes breeding x4 faster.",
     "desc": "Makes waiting for eggs in the Day Care four times faster.",
     "authors": ["gotheru"],
-    "tags": ["add_ons", "qol", "cheats"],
+    "tags": ["add_ons", "qol", "cheats", "daycare"],
+    "version": "1.0.0"
+  },
+  {
+    "id": "ring_daycare",
+    "name": "Ring the Daycare",
+    "short_desc": "Allows to use the Daycare from anywhere.",
+    "desc": "Allows to ring the Daycare from anywhere and adds options to generate, collect and hatch eggs instantly. Right now the code kinda sucks and overrides the Point Card to do this. Register the Point Card and use it from the quick registered menu (the item menu is kinda bugged).",
+    "authors": ["gotheru (unfortunately)"],
+    "tags": ["add_ons", "qol", "daycare"],
     "version": "1.0.0"
   }
 ]
